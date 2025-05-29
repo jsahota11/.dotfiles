@@ -82,3 +82,4 @@ LS_COLORS=$LS_COLORS:'di=1;33:' ; export LS_COLORS
 export NVM_DIR="$HOME/.nvm"
 
 (( ! ${+functions[p10k]} )) || p10k finalize
+fpath+=${ZDOTDIR:-~}/.zsh_functions

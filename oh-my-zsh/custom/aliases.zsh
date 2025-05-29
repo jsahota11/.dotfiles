@@ -1,6 +1,7 @@
 alias edit-aliases='nvim $ZSH_CUSTOM/aliases.zsh'
 
 alias zshcf="nvim ~/.zshrc"
+alias alacf="nvim ~/.dotfiles/alacritty/alacritty.toml"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias repos="cd ~/Documents/REPOS && ls"
 alias nvimcp="cd ~/.config/nvim/lua/custom/plugins && ls"
@@ -14,6 +15,8 @@ alias kssh-aviary="kitten ssh sahotaj2@aviary.cs.umanitoba.ca"
 alias kssh="kitten ssh"
 alias gada="cd ~/Documents/Research/ && ls"
 alias scripts="cd ~/.local/share/nemo/scripts/ && ls"
+alias dfs="cd ~/.dotfiles && ls"
+alias pushdfs="dfs && ga . && gcm \"Lazy commit.\" && gp"
 
 alias start-lb='eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"'
 alias start-ss='eval "$(starship init zsh)"'

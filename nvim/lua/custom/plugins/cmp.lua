@@ -4,11 +4,11 @@ return {
     lazy = false,
     event = 'InsertEnter',
 	    dependencies = {
-				{'hrsh7th/cmp-nvim-lsp',lazy = true, optional = true},
-				{'hrsh7th/cmp-path', lazy = true, optional = true},
-				{'hrsh7th/cmp-cmdline',lazy = true, optional = true},
-				{'L3MON4D3/LuaSnip', lazy = true, optional = true},
-				{'saadparwaiz1/cmp_luasnip', lazy = true, optional = true},
+				{'hrsh7th/cmp-nvim-lsp'},
+				{'hrsh7th/cmp-path'},
+				{'hrsh7th/cmp-cmdline'},
+				{'L3MON4D3/LuaSnip'},
+				{'saadparwaiz1/cmp_luasnip'},
 	      {
 		'rafamadriz/friendly-snippets',
 		config = function()

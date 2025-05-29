@@ -1,0 +1,93 @@
+
+general.working_directory = "/home/jatinder/"
+
+window.dimensions = { columns = 115, lines = 115 }
+
+window.padding = { x = 5, y = 5 }
+
+window.opacity = 0.9
+
+font.normal = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
+
+font.size = 10.0
+
+font.glyph_offset = {x=0, y = 0}
+
+font.offset = {x = -1, y = 0}
+
+colors.primary.foreground = "#FFFFFF"
+
+colors.primary.background = "#000000"
+
+colors.cursor = {text = "CellBackground", cursor = "#7fb8d1"}
+
+colors.vi_mode_cursor = { text = "CellBackground", cursor = "#7fb8d1"}
+
+colors.search.matches = {foreground = "CellBackground", background = "CellForeground"}
+
+colors.search.focused_match = {foreground = "#FFFFFF", background = "#7fb8d1"}
+
+
+
+colors.normal.black = "#000000"
+
+colors.normal.red = "#db0202"
+
+colors.normal.green = "#04ff00"
+
+colors.normal.yellow = "#ffcc00"
+
+colors.normal.blue = "#3e3a64"
+
+colors.normal.magenta = "#301f30"
+
+colors.normal.cyan = "#02c5cc"
+
+colors.normal.white = "#000000"
+
+
+# colors.bright.black = "#000000"
+#
+# colors.bright.red = "#e296ac"
+#
+# colors.bright.green = "#69c816"
+#
+# colors.bright.yellow = "#ffffa5"
+#
+# colors.bright.blue = "#3e3a64"
+#
+# colors.bright.magenta = "#301f30"
+#
+# colors.bright.cyan = "#7fb8d1"
+#
+# colors.bright.white = "#000000"
+#
+#
+#
+# colors.dim.black = "#000000"
+#
+# colors.dim.red = "#e296ac"
+#
+# colors.dim.green = "#69c816"
+#
+# colors.dim.yellow = "#ffffa5"
+#
+# colors.dim.blue = "#3e3a64"
+#
+# colors.dim.magenta = "#301f30"
+#
+# colors.dim.cyan = "#7fb8d1"
+#
+# colors.dim.white = "#000000"
+
+cursor.style = { shape = "Underline", blinking = "Always"}
+
+cursor.vi_mode_style = "None"
+
+cursor.blink_interval = 500
+
+cursor.blink_timeout = 0
+
+terminal.shell = "/bin/zsh"
+
+mouse.hide_when_typing = true

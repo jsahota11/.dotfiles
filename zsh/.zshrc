@@ -2,6 +2,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 export ZSH="$HOME/.oh-my-zsh"
@@ -15,17 +16,21 @@ CASE_SENSITIVE="false"
 zstyle ':omz:update' mode reminder
 
 # Otherwise it says my machine name and stuff on the tab
-DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="false"
 
 # auto-correction.
 ENABLE_CORRECTION="true"
 
 # while waiting for completion
-COMPLETION_WAITING_DOTS="%F{red}waiting...%f"
+COMPLETION_WAITING_DOTS="%F{red} <waiting...> %f"
 
 # add pyenv to path
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+
+# export term env variable
+export TERM=xterm-256color
+
 
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -75,8 +80,8 @@ source /usr/share/autojump/autojump.zsh
 
 
 echo -ne '\e[4 q'
-ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#fc3db0'
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#9f21b5,underline, standout"
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#f74349'
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#9f21b5,underline, standout"
 LS_COLORS=$LS_COLORS:'di=1;33:' ; export LS_COLORS
 
 export NVM_DIR="$HOME/.nvm"

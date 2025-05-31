@@ -7,7 +7,7 @@ window.padding = { x = 5, y = 5 }
 
 window.opacity = 0.9
 
-font.normal = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
+font.normal = { family = "JetBrainsMono Nerd Font", style = "Bold" }
 
 font.size = 10.0
 
@@ -28,6 +28,8 @@ colors.search.matches = {foreground = "CellBackground", background = "CellForegr
 colors.search.focused_match = {foreground = "#FFFFFF", background = "#7fb8d1"}
 
 
+env.TERM = "xterm-256color"
+
 
 colors.normal.black = "#000000"
 
@@ -37,13 +39,13 @@ colors.normal.green = "#04ff00"
 
 colors.normal.yellow = "#ffcc00"
 
-colors.normal.blue = "#3e3a64"
+colors.normal.blue = "#4549bf"
 
-colors.normal.magenta = "#301f30"
+colors.normal.magenta = "#db6edb"
 
 colors.normal.cyan = "#02c5cc"
 
-colors.normal.white = "#000000"
+colors.normal.white = "#FFFFFF"
 
 
 # colors.bright.black = "#000000"
@@ -80,6 +82,8 @@ colors.normal.white = "#000000"
 #
 # colors.dim.white = "#000000"
 
+colors.transparent_background_colors=true
+
 cursor.style = { shape = "Underline", blinking = "Always"}
 
 cursor.vi_mode_style = "None"
@@ -91,3 +95,5 @@ cursor.blink_timeout = 0
 terminal.shell = "/bin/zsh"
 
 mouse.hide_when_typing = true
+
+window.dynamic_title = true

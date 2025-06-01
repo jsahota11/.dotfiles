@@ -315,13 +315,11 @@ require('lazy').setup({
           bg_highlight = '#2e2e2e',
 
           fg = '#eeeeee',
-
           blue = '#8173f5',
-
           grey = '#a8a5a5',
           green = '#00ff15',
           cyan = '#17d9ff',
-          red = '#a61422',
+          red = '#f53145',
           yellow = '#fdff85',
 --          magenta = '#6e244e',
           -- pink = '#f65353',

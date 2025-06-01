@@ -1,0 +1,21 @@
+# Allows us to use Oh My Zsh plugins
+getantidote/use-omz
+
+# Enhancing prompt
+# sindresorhus/pure
+
+# Oh My Zsh plugins from the Oh My Zsh repo
+ohmyzsh/ohmyzsh path:plugins/git
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages
+ohmyzsh/ohmyzsh path:plugins/extract
+ohmyzsh/ohmyzsh path:plugins/autojump
+
+# Community plugins (these are GitHub usernames + repos)
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-history-substring-search
+Aloxaf/zsh-autopair
+MichaelAquilina/zsh-you-should-use
+
+# Theme
+romkatv/powerlevel10k

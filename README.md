@@ -45,7 +45,7 @@ Link .vimrc into ~
 
 ---
 
-### Depracated
+### Deprecated
 
 ---
 

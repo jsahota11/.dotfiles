@@ -43,7 +43,11 @@ Link .tmux.conf into ~
 
 Link .vimrc into ~
 
+---
+
 ### Depracated
+
+---
 
 #### oh-my-zsh
 

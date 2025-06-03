@@ -12,15 +12,7 @@ export LANG="en_US.UTF-8"
 export EDITOR="nvim"
 export TERM="xterm-256color"
 export NVM_DIR="$HOME/.nvm"
-export ZSH_CUSTOM="$HOME/.dotfiles/zsh"
-
-# --- Antidote plugin manager ---
-# source "/home/jatinder/.antidote/antidote.zsh"
-
-# Enable Zsh completions for plugins like git, etc.
-# autoload -Uz compinit
-# compinit
-
+export ZSH_CUSTOM="$HOME/zsh_custom"
 
 zsh_plugins=${ZDOTDIR:-$HOME}/.zsh_plugins
 if [[ ! ${zsh_plugins}.zsh -nt ${zsh_plugins}.txt ]]; then
@@ -31,9 +23,6 @@ if [[ ! ${zsh_plugins}.zsh -nt ${zsh_plugins}.txt ]]; then
 fi
 
 source ${zsh_plugins}.zsh
-
-# Load plugins from GitHub
-# antidote load ${ZDOTDIR:-HOME}/.zsh_plugins.txt
 
 # --- Powerlevel10k prompt (optional) ---
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
@@ -67,7 +56,6 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 # --- Fix terminal cursor style ---
 echo -ne '\e[4 q'
 
-
 # Set LS_COLORS via dircolors
 eval "$(dircolors -b)"
 
@@ -77,3 +65,5 @@ LS_COLORS=$LS_COLORS:'di=1;33:' ; export LS_COLORS
 # Alias ls to use colors
 alias ls='ls --color=auto'
 
+# Enable zoxide
+eval "$(zoxide init zsh)"

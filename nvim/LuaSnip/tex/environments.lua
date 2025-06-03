@@ -61,4 +61,18 @@ return {
       { delimiters = '<>' }
     )
   ),
+
+  s(
+    {trig = 'bl', dscr='Block environment, good for theorems/results.'},
+      fmt(
+      [[
+				\begin{block}{Theorem}
+        				<>
+        \end{block}
+      ]],
+
+      {i(1)},
+      {delimiters = '<>'}
+    )
+  )
 }

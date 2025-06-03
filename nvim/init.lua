@@ -21,7 +21,7 @@
 ========                                                     ========
 =====================================================================
 =====================================================================
- 
+
 What is Kickstart?
 
   Kickstart.nvim is *not* a distribution.
@@ -59,7 +59,7 @@ Kickstart Guide:
   of the kickstart init.lua.
 
   Next, run AND READ `:help`.
-    This will open up a help window with some basic information
+   This will open up a help window with some basic information
     about reading, navigating and searching the builtin help documentation.
 
     This should be the first place you go to look when you're stuck or confused
@@ -282,34 +282,34 @@ require('lazy').setup({
     'scottmckendry/cyberdream.nvim',
     lazy = false, -- this is always on startup i like this one
     priority = 1000,
-    
+
     config = function ()
       require("cyberdream").setup({
-    -- Set light or dark variant
-    variant = "default", -- use "light" for the light variant. Also accepts "auto" to set dark or light colors based on the current value of `vim.o.background`
+        -- Set light or dark variant
+        variant = "default", -- use "light" for the light variant. Also accepts "auto" to set dark or light colors based on the current value of `vim.o.background`
 
-    -- Enable transparent background
-    transparent = true,
+        -- Enable transparent background
+        transparent = true,
 
-    -- Reduce the overall saturation of colours for a more muted look
-    saturation = 1, -- accepts a value between 0 and 1. 0 will be fully desaturated (greyscale) and 1 will be the full color (default)
+        -- Reduce the overall saturation of colours for a more muted look
+        saturation = 1, -- accepts a value between 0 and 1. 0 will be fully desaturated (greyscale) and 1 will be the full color (default)
 
-    -- Enable italics comments
-    italic_comments = true,
+        -- Enable italics comments
+        italic_comments = true,
 
-    -- Replace all fillchars with ' ' for the ultimate clean look
-    hide_fillchars = false,
+        -- Replace all fillchars with ' ' for the ultimate clean look
+        hide_fillchars = false,
 
-    -- Apply a modern borderless look to pickers like Telescope, Snacks Picker & Fzf-Lua
-    borderless_pickers = true,
+        -- Apply a modern borderless look to pickers like Telescope, Snacks Picker & Fzf-Lua
+        borderless_pickers = true,
 
-    -- Set terminal colors used in `:terminal`
-    terminal_colors = true,
+        -- Set terminal colors used in `:terminal`
+        terminal_colors = true,
 
-    -- Improve start up time by caching highlights. Generate cache with :CyberdreamBuildCache and clear with :CyberdreamClearCache
-    cache = false,
+        -- Improve start up time by caching highlights. Generate cache with :CyberdreamBuildCache and clear with :CyberdreamClearCache
+        cache = false,
 
-    colors = {
+        colors = {
           bg = '#000000',
           bg_alt = '#202121',
           bg_highlight = '#2e2e2e',
@@ -321,29 +321,29 @@ require('lazy').setup({
           cyan = '#17d9ff',
           red = '#f53145',
           yellow = '#fdff85',
---          magenta = '#6e244e',
+          --          magenta = '#6e244e',
           -- pink = '#f65353',
-        
+
           -- orange = '#e6754c',
 
           purple = '#fa5ced'
 
         },
 
-    -- Disable or enable colorscheme extensions
-    extensions = {
-        telescope = true,
-        mini = true,
+        -- Disable or enable colorscheme extensions
+        extensions = {
+          telescope = true,
+          mini = true,
 
-    },
-})
+        },
+      })
     end
   },
 
-  -- {
-  -- 'vidocqh/auto-indent.nvim',
-  -- opts = {},
-  -- },
+  {
+    'vidocqh/auto-indent.nvim',
+    opts = {},
+  },
 
   -- Core DAP plugin
   {
@@ -1004,17 +1004,17 @@ require('lazy').setup({
           -- `friendly-snippets` contains a variety of premade snippets.
           --    See the README about individual language/framework/plugin snippets:
           --    https://github.com/rafamadriz/friendly-snippets
-          -- {
-          --   'rafamadriz/friendly-snippets',
-          --   config = function()
-          --     require('luasnip.loaders.from_vscode').lazy_load()
-          --   end,
-          -- },
+          {
+            'rafamadriz/friendly-snippets',
+            config = function()
+              require('luasnip.loaders.from_vscode').lazy_load()
+            end,
+          },
         },
         opts = {},
       },
       'folke/lazydev.nvim',
-      'rafamadriz/friendly-snippets'
+      -- 'rafamadriz/friendly-snippets'
     },
     --- @module 'blink.cmp'
     --- @type blink.cmp.Config
@@ -1041,12 +1041,13 @@ require('lazy').setup({
         -- <c-k>: Toggle signature help
         --
         -- See :h blink-cmp-config-keymap for defining your own keymap
-        -- keymap = {
-        --   preset = 'default',
-        --   ['<C-j>'] = {'select_next', 'fallback'},
-        --   ['<C-k>'] = {'select_up', 'fallback'},
-        --   ['<CR>'] = {'select_and_accept'}
-        -- }
+        keymap = {
+          preset = 'default',
+          ['Tab'] = {'select_next_and_accept'},
+          ['<C-j>'] = {'select_next', 'fallback'},
+          ['<C-k>'] = {'select_up', 'fallback'},
+          ['<CR>'] = {'select_and_accept'}
+        }
 
         -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
         --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
@@ -1065,7 +1066,7 @@ require('lazy').setup({
       },
 
       sources = {
-        default = { 'lsp', 'path', 'snippets', 'lazydev', 'buffer' },
+        default = { 'lsp', 'path', 'snippets', 'lazydev', 'buffer'},
         providers = {
           lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
         },
@@ -1086,6 +1087,8 @@ require('lazy').setup({
       signature = { enabled = true },
     },
   },
+
+
 
   -- { -- You can easily change to a different colorscheme.
   --   -- Change the name of the colorscheme plugin below, and then
@@ -1122,7 +1125,7 @@ require('lazy').setup({
       --  - ci'  - [C]hange [I]nside [']quote
       --require('mini.ai').setup { n_lines = 500 }
 
-     --require('mini.align').setup()
+      --require('mini.align').setup()
 
       --require('mini.completion').setup()
       require('mini.pairs').setup()
@@ -1140,20 +1143,33 @@ require('lazy').setup({
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
       --  and try some other statusline plugin
-       --local statusline = require 'mini.statusline'
+      --local statusline = require 'mini.statusline'
       -- -- set use_icons to true if you have a Nerd Font
-       --statusline.setup { use_icons = true }
+      --statusline.setup { use_icons = true }
       --
       -- -- You can configure sections in the statusline by overriding their
       -- -- default behavior. For example, here we set the section for
       -- -- cursor location to LINE:COLUMN
       -- ---@diagnostic disable-next-line: duplicate-set-field
-    
+
       --
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
   },
+
+  {
+    'windwp/nvim-autopairs',
+    event = 'InsertEnter',
+    config = function ()
+      require('nvim-autopairs').setup{
+        check_ts = true,
+      }
+    end,
+  },
+
+
+
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
@@ -1189,7 +1205,7 @@ require('lazy').setup({
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
   require 'kickstart.plugins.debug',
-  --require 'kickstart.plugins.indent_line',
+  --  require 'kickstart.plugins.indent_line',
   require 'kickstart.plugins.lint',
   --require 'kickstart.plugins.autopairs',
   --require 'kickstart.plugins.neo-tree',
@@ -1206,26 +1222,26 @@ require('lazy').setup({
   -- In normal mode type `<space>sh` then write `lazy.nvim-plugin`
   -- you can continue same window with `<space>sr` which resumes last telescope search
 }, {
-  ui = {
-    -- If you are using a Nerd Font: set icons to an empty table which will use the
-    -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
-    icons = vim.g.have_nerd_font and {} or {
-      cmd = '⌘',
-      config = '🛠',
-      event = '📅',
-      ft = '📂',
-      init = '⚙',
-      keys = '🗝',
-      plugin = '🔌',
-      runtime = '💻',
-      require = '🌙',
-      source = '📄',
-      start = '🚀',
-      task = '📌',
-      lazy = '💤 ',
+    ui = {
+      -- If you are using a Nerd Font: set icons to an empty table which will use the
+      -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
+      icons = vim.g.have_nerd_font and {} or {
+        cmd = '⌘',
+        config = '🛠',
+        event = '📅',
+        ft = '📂',
+        init = '⚙',
+        keys = '🗝',
+        plugin = '🔌',
+        runtime = '💻',
+        require = '🌙',
+        source = '📄',
+        start = '🚀',
+        task = '📌',
+        lazy = '💤 ',
+      },
     },
-  },
-})
+  })
 
 vim.cmd 'colorscheme cyberdream'
 
@@ -1251,14 +1267,19 @@ vim.keymap.set("v", "JK", "<Esc>", {noremap = true})
 vim.keymap.set("v", "kj", "<Esc>", {noremap = true})
 vim.keymap.set("v", "KJ", "<Esc>", {noremap = true})
 
+pcall(vim.keymap.del, "v", "s")
+
 vim.o.timeout = true
 vim.o.timeoutlen = 50
 
+-- vim.opt.smartindent = true
+-- vim.opt.autoindent = true
 vim.o.shiftwidth = 4
 vim.o.tabstop = 4
 
 vim.lsp.handlers["textDocument/signatureHelp"] = function() end
 vim.lsp.handlers["textDocument/hover"] = function() end
+
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
